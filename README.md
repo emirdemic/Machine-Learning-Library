@@ -21,12 +21,12 @@ Python 3.8.5
 ## Algorithms<a name="algorithms"/>
 This is the full list of algorithms this repository currently holds:
 -  Regression<br/>
-[Linear Regression]()<br/><br/>
+[Linear Regression](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Regression/LinearRegression.py)<br/><br/>
 -  Classification<br/>
-[Perceptron]()<br/>
-[Adaptive Linear Neuron]()<br/>
-[Logistic Regression]()<br/>
-[Gaussian Discriminative Analysis]()<br/>
+[Perceptron](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/Perceptron.py)<br/>
+[Adaptive Linear Neuron](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/AdaptiveLinearNeuron.py)<br/>
+[Logistic Regression](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/LogisticRegression.py)<br/>
+[Gaussian Discriminative Analysis](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/GaussianDiscriminantAnalysis.py)<br/>
 -  Unsupervised Learning
 [Market Basket Analysis]()<br/>
 
