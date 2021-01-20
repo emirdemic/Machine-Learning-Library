@@ -4,6 +4,7 @@
 [About The Project](#goal)<br/>
 [Tools](#tools)<br/>
 [Algorithms](#algorithms)<br/>
+[Theoretical Explanations](#theory)<br/>
 [Roadmap](#roadmap)<br/>
 [References](#references)<br/>
 
@@ -27,8 +28,11 @@ This is the full list of algorithms this repository currently holds:
 [Adaptive Linear Neuron](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/AdaptiveLinearNeuron.py)<br/>
 [Logistic Regression](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/LogisticRegression.py)<br/>
 [Gaussian Discriminative Analysis](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/GaussianDiscriminantAnalysis.py)<br/>
--  Unsupervised Learning
+-  Unsupervised Learning<br/>
 [Market Basket Analysis]()<br/>
+[COOLCAT Clustering Algorithm]()<br/>
+
+## Theoretical Explanations<a name="theorys"/>
 
 
 
@@ -39,5 +43,5 @@ This is the full list of algorithms this repository currently holds:
 ## References<a name="references"/>
 I have used multiple references while implementing these algorithms. The most important and comprehensive ones are:
 *  [The Elements of Statistical Learning]() by T. Hastie, R.Tibshirani, and J. Friedman
-*  ['Mathematics for Machine Learning]() by M. P. Deisenroth, A. A. Faisal, and C. S. Ong
+*  [Mathematics for Machine Learning]() by M. P. Deisenroth, A. A. Faisal, and C. S. Ong
 *  [NumPy documentation]()
