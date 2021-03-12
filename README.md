@@ -1,4 +1,4 @@
-# Machine-Learning-Library
+# Machine Learning Library
 
 ## Table of Content
 [About The Project](#goal)<br/>
