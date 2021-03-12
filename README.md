@@ -29,8 +29,8 @@ This is the full list of algorithms this repository currently holds:
 [Logistic Regression](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/LogisticRegression.py)<br/>
 [Gaussian Discriminative Analysis](https://github.com/emirdemic/Machine-Learning-Library/blob/main/Classification/GaussianDiscriminantAnalysis.py)<br/>
 -  Unsupervised Learning<br/>
-[Market Basket Analysis]()<br/>
-[COOLCAT Clustering Algorithm]()<br/>
+[COOLCAT Clustering Algorithm](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/COOLCAT.py)<br/>
+[Multidimensional Scaling](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/MDS.py)
 
 ## Theoretical Explanations<a name="theorys"/>
 
