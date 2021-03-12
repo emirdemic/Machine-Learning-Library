@@ -73,7 +73,7 @@ expected entropy of the whole system. More specifically, the incremental step is
     * for $i = 1,...,k$:
       * temporarily place $p$ in $C^{i}$ and calculate the expected entropy of the system $E(C^{i})$
       * let $j = argmin_{i}(E(C^{i}))$
-    * place $p$ in $C_{j}$
+    * place <img src="https://render.githubusercontent.com/render/math?math=$p$ in $C_{j}$">
   * until all points have been clustered
 
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
