@@ -92,8 +92,10 @@ The main method of the algorithm which clusters the data is done. However, there
 The goal for 2021 is to implement following algorithms:
   * [CACTUS Clustering Algorithm](https://dl.acm.org/doi/abs/10.1145/312129.31220)
   * [STIRR Clustering Algorithm](https://link.springer.com/article/10.1007/s007780050005)
-  * [Multidimensional Scaling for binary data]
+  * [Multidimensional Scaling for binary data](https://direct.mit.edu/neco/article/14/5/1195/6610/Methods-for-Binary-Multidimensional-Scaling)
   * [Clsutering Algorithm Based on Association Rule Hypergraphs](https://conservancy.umn.edu/handle/11299/215301)
+  * [Factor Analysis with Horn Parallel Criterion for Factor Retention](https://journals.sagepub.com/doi/abs/10.1177/1536867X0900900207)
+  * And much more...
 
 
 ## References<a name="references"/>
