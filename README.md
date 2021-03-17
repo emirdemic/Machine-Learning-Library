@@ -52,7 +52,7 @@ entropy of the whole system*:
 
 where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
-
+<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Balign%7D%0A%0A">
 In order to find such clusters, algorithm goes through two steps: *initialization step* and *incremental step*. 
 The initialization step finds two datapoints $p_{1}$ and $p_{2}$ such that their multivariate entropy 
 $E(p_{1}, p_{2})$ is the highest possible. These two datapoints will be assigned to clusters $C_{1}$ and $C_{2}$.
