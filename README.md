@@ -50,13 +50,16 @@ entropy of the whole system*:
 
 <div align="center"><img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Baligned%7D%0A"></div>
 
-where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
+where <img src="https://render.githubusercontent.com/render/math?math=%7CC_%7Bk%7D%7C"> is the size of cluster <img src="https://render.githubusercontent.com/render/math?math=k"> and <img src="https://render.githubusercontent.com/render/math?math=%7CD%7C"> is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
 In order to find such clusters, algorithm goes through two steps: *initialization step* and *incremental step*. 
-The initialization step finds two datapoints $p_{1}$ and $p_{2}$ such that their multivariate entropy 
-$E(p_{1}, p_{2})$ is the highest possible. These two datapoints will be assigned to clusters $C_{1}$ and $C_{2}$.
-Afterwards, algorithm finds new datapoint $p_{j}$ which maximizes $min_{i=1,...,j-1}(E(p_{i}, p_{j}))$, 
-until it finds all $k$ points and initiate a total of $k$ clusters.
+The initialization step finds two datapoints <img src="https://render.githubusercontent.com/render/math?math=p_%7B1%7D"> and 
+<img src="https://render.githubusercontent.com/render/math?math=p_%7B2%7D"> such that their multivariate entropy 
+<img src="https://render.githubusercontent.com/render/math?math=E(p_%7B1%7D%2C%20p_%7B2%7D)"> is the highest possible. 
+These two datapoints will be assigned to clusters <img src="https://render.githubusercontent.com/render/math?math=C_%7B1%7D"> and 
+<img src="https://render.githubusercontent.com/render/math?math=C_%7B2%7D">.
+Afterwards, algorithm finds new datapoint $p_{j}$ which maximizes <img src="https://render.githubusercontent.com/render/math?math=min_%7Bi%3D1%2C...%2Cj-1%7D(E(p_%7Bi%7D%2C%20p_%7Bj%7D))">, 
+until it finds all <img src="https://render.githubusercontent.com/render/math?math=k"> points and initiate a total of <img src="https://render.githubusercontent.com/render/math?math=k"> clusters.
 
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
