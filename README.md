@@ -33,28 +33,21 @@ This is the full list of algorithms this repository currently holds. Note that n
 [Multidimensional Scaling](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/MDS.py)
 
 ## Theoretical Explanations<a name="theorys"/><br/>
-###COOLCAT Clustering Algorithm<br/>![Screenshot_4](https://user-images.githubusercontent.com/57667464/111456884-cdb32780-8717-11eb-9e05-1cb41deb19a0.png)
+###COOLCAT Clustering Algorithm<br/>!
+
 
 The clustering analysis used here is COOLCAT clustering algorithm proposed by 
 [Barbara, Couto, & Li (2002)](https://dl.acm.org/doi/abs/10.1145/584792.584888). 
 COOLCAT algorithm is used for clustering categorical datasets and is based on a notion of *entropy*. 
 More specifically, the entropy of one categorical variable is:
 
-$$
-\begin{aligned}
-E(X) = -\sum_{x \in S} p(x)log(p(x))
-\end{aligned}
-$$
+[entropy](https://user-images.githubusercontent.com/57667464/111456984-e7ed0580-8717-11eb-8bfc-042c8a77e70e.png)
 
 Authors assume variable independence, which means that multivariate entropy is equal to
 the sum of each variable's entropy. The minimization criterion of the algorithm is the *expected 
 entropy of the whole system*:
 
-$$
-\begin{aligned}
-E(C) = \sum_{k} (\frac{|C_{k}|}{|D|}(E(C_{k})))
-\end{aligned}
-$$
+![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)
 
 
 where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
@@ -69,13 +62,8 @@ until it finds all $k$ points and initiate a total of $k$ clusters.
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
 
-* given an initial set of clusters $C_{1}$ to $C_{k}$:
-  * for each datapoint $p$ do:
-    * for $i = 1,...,k$:
-      * temporarily place $p$ in $C^{i}$ and calculate the expected entropy of the system $E(C^{i})$
-      * let $j = argmin_{i}(E(C^{i}))$
-    * place <img src="https://render.githubusercontent.com/render/math?math=$p$ in $C_{j}$">
-  * until all points have been clustered
+![Screenshot_4](https://user-images.githubusercontent.com/57667464/111457041-fe935c80-8717-11eb-9c23-595ac319485d.png)
+
 
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
 to solve this problem: reprocessing the worst fitted datapoints. After a batch of datapoints is clustered, for each
