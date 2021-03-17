@@ -76,8 +76,15 @@ expected entropy of the whole system. More specifically, the incremental step is
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
 to solve this problem: reprocessing the worst fitted datapoints. After a batch of datapoints is clustered, for each
 datapoint we can calculate the probability of clusters having values datapoint's values, i.e.
-we calculate $p_{i} = \prod_{j} (p_{ij})$ for each datapoint. Afterwards, we find $m$ datapoints for which 
+we calculate <img src="https://render.githubusercontent.com/render/math?math=p_%7Bi%7D%20%3D%20%5Cprod_%7Bj%7D%20(p_%7Bij%7D)">for each datapoint. Afterwards, we find $m$ datapoints for which 
 the calculated probability is the lowest and reprocess those datapoints again.
+
+#### COOLCAT: TO DO<br/>
+The main method of the algorithm which clusters the data is done. However, there are still two methods which need to be written:
+* worst_fit() method
+  * determines datapoints which are the worst fit for their cluster and reclusterizes them
+* category_utility_function() method
+  * calculates how good are the clusters
 
 
 ## Roadmap<a name="roadmap"/>
