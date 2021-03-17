@@ -65,7 +65,7 @@ until it finds all <img src="https://render.githubusercontent.com/render/math?ma
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
 
-* given an initial set of clusters <img src="https://render.githubusercontent.com/render/math?math=C_%7B1%7D%24%20to%20%24C_%7Bk%7D">:
+* <img src="https://render.githubusercontent.com/render/math?math=given%20an%20initial%20set%20of%20clusters%20%24C_%7B1%7D%24%20to%20%24C_%7Bk%7D%24">:
   * for each datapoint <img src="https://render.githubusercontent.com/render/math?math=p"> do:
     * for <img src="https://render.githubusercontent.com/render/math?math=i%20%3D%201%2C...%2Ck">:
       * temporarily place <img src="https://render.githubusercontent.com/render/math?math=p"> in <img src="https://render.githubusercontent.com/render/math?math=C%5E%7Bi%7D"> and calculate the expected entropy of the system <img src="https://render.githubusercontent.com/render/math?math=E(C%5E%7Bi%7D)">
