@@ -47,7 +47,7 @@ Authors assume variable independence, which means that multivariate entropy is e
 the sum of each variable's entropy. The minimization criterion of the algorithm is the *expected 
 entropy of the whole system*:
 
-![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)
+![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)<br/><br/>
 <img align="right" width="100" height="100" src="https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png")>
 
 where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
