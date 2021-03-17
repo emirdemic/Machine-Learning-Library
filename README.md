@@ -32,8 +32,9 @@ This is the full list of algorithms this repository currently holds. Note that n
 [COOLCAT Clustering Algorithm](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/COOLCAT.py)<br/>
 [Multidimensional Scaling](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/MDS.py)
 
-## Theoretical Explanations<a name="theorys"/>
-###COOLCAT Clustering Algorithm
+## Theoretical Explanations<a name="theorys"/><br/>
+###COOLCAT Clustering Algorithm<br/>![Screenshot_4](https://user-images.githubusercontent.com/57667464/111456884-cdb32780-8717-11eb-9e05-1cb41deb19a0.png)
+
 The clustering analysis used here is COOLCAT clustering algorithm proposed by 
 [Barbara, Couto, & Li (2002)](https://dl.acm.org/doi/abs/10.1145/584792.584888). 
 COOLCAT algorithm is used for clustering categorical datasets and is based on a notion of *entropy*. 
