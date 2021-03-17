@@ -48,7 +48,7 @@ the sum of each variable's entropy. The minimization criterion of the algorithm 
 entropy of the whole system*:
 
 ![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)
-<img align="right" width="100" height="100" src=![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)>
+<img align="right" width="100" height="100" src="https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png")>
 
 where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
