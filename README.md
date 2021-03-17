@@ -33,7 +33,8 @@ This is the full list of algorithms this repository currently holds. Note that n
 [Multidimensional Scaling](https://github.com/emirdemic/Machine-Learning-Library/blob/main/UnsupervisedLearning/MDS.py)
 
 ## Theoretical Explanations<a name="theorys"/><br/>
-###COOLCAT Clustering Algorithm<br/>!
+
+###COOLCAT Clustering Algorithm<br/>
 
 
 The clustering analysis used here is COOLCAT clustering algorithm proposed by 
@@ -41,32 +42,43 @@ The clustering analysis used here is COOLCAT clustering algorithm proposed by
 COOLCAT algorithm is used for clustering categorical datasets and is based on a notion of *entropy*. 
 More specifically, the entropy of one categorical variable is:
 
-![entropy](https://user-images.githubusercontent.com/57667464/111456984-e7ed0580-8717-11eb-8bfc-042c8a77e70e.png)
-<img src="https://render.githubusercontent.com/render/math?math=%5CHuge%0A%5Cbegin%7Balign*%7D%0Ax%26%3D1%5C%5C%0Ax%2By%26%3D2%5C%5C%0AP%26%3D%5Cbegin%7Bbmatrix%7Dp_1%5C%5Cp_2%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign*%7D">
+<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(X)%20%3D%20-%5Csum_%7Bx%20%5Cin%20S%7D%20p(x)log(p(x))%0A%5Cend%7Baligned%7D%0A">
+
 Authors assume variable independence, which means that multivariate entropy is equal to
 the sum of each variable's entropy. The minimization criterion of the algorithm is the *expected 
 entropy of the whole system*:
 
-![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)<br/><br/>
+$$
+\begin{aligned}
+E(C) = \sum_{k} (\frac{|C_{k}|}{|D|}(E(C_{k})))
+\end{aligned}
+$$
 
-where *Ck* is the size of cluster *k* and *|D|* is the size of dataset. 
+
+where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
 
 In order to find such clusters, algorithm goes through two steps: *initialization step* and *incremental step*. 
-The initialization step finds two datapoints *p1* and *p2* such that their multivariate entropy 
-*E(p1, p2)* is the highest possible. These two datapoints will be assigned to clusters *C1* and *C2*.
-Afterwards, algorithm finds new datapoint *pj* which maximizes *min(E(pi, pj)*
-until it finds all *k* points and initiate a total of *k* clusters.
+The initialization step finds two datapoints $p_{1}$ and $p_{2}$ such that their multivariate entropy 
+$E(p_{1}, p_{2})$ is the highest possible. These two datapoints will be assigned to clusters $C_{1}$ and $C_{2}$.
+Afterwards, algorithm finds new datapoint $p_{j}$ which maximizes $min_{i=1,...,j-1}(E(p_{i}, p_{j}))$, 
+until it finds all $k$ points and initiate a total of $k$ clusters.
 
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
 
-![Screenshot_4](https://user-images.githubusercontent.com/57667464/111457041-fe935c80-8717-11eb-9c23-595ac319485d.png)
-
+* given an initial set of clusters $C_{1}$ to $C_{k}$:
+  * for each datapoint $p$ do:
+    * for $i = 1,...,k$:
+      * temporarily place $p$ in $C^{i}$ and calculate the expected entropy of the system $E(C^{i})$
+      * let $j = argmin_{i}(E(C^{i}))$
+    * place $p$ in $C_{j}$
+  * until all points have been clustered
 
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
 to solve this problem: reprocessing the worst fitted datapoints. After a batch of datapoints is clustered, for each
-datapoint we can calculate the probability of clusters having values datapoint's values. Afterwards, we find *m* datapoints for which 
+datapoint we can calculate the probability of clusters having values datapoint's values, i.e.
+we calculate $p_{i} = \prod_{j} (p_{ij})$ for each datapoint. Afterwards, we find $m$ datapoints for which 
 the calculated probability is the lowest and reprocess those datapoints again.
 
 
