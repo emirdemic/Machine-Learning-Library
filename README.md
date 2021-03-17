@@ -8,8 +8,6 @@
 [Roadmap](#roadmap)<br/>
 [References](#references)<br/>
 
-<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Balign*%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Balign*%7D%0A%0A">
-
 ## About The Project <a name="goal"/>
 The goal of the project is to create a personal machine learning library populated with different machine learning algorithms, written in Python using only NumPy library for quick and efficient computations. More specifically, the idea is to implement both common and uncommon machine learning algorithms.<br/><br/>
 Furthermore, this page contains theoretical and practical explanations of each machine learning algorithm currently populating this repository. This allows anyone using code from this repository to dive into theory behind the code.
@@ -44,13 +42,13 @@ The clustering analysis used here is COOLCAT clustering algorithm proposed by
 COOLCAT algorithm is used for clustering categorical datasets and is based on a notion of *entropy*. 
 More specifically, the entropy of one categorical variable is:
 
-<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(X)%20%3D%20-%5Csum_%7Bx%20%5Cin%20S%7D%20p(x)log(p(x))%0A%5Cend%7Balign*%7D%0A">
+<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(X)%20%3D%20-%5Csum_%7Bx%20%5Cin%20S%7D%20p(x)log(p(x))%0A%5Cend%7Baligned%7D%0A">
 
 Authors assume variable independence, which means that multivariate entropy is equal to
 the sum of each variable's entropy. The minimization criterion of the algorithm is the *expected 
 entropy of the whole system*:
 
-<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Balign*%7D%0A%0A">
+<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Baligned%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Baligned%7D%0A">
 
 where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
