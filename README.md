@@ -62,7 +62,7 @@ Afterwards, algorithm finds new datapoint <img src="https://render.githubusercon
 which maximizes <img src="https://render.githubusercontent.com/render/math?math=min_%7Bi%3D1%2C...%2Cj-1%7D(E(p_%7Bi%7D%2C%20p_%7Bj%7D))">, 
 until it finds all <img src="https://render.githubusercontent.com/render/math?math=k"> points and initiate a total of <img src="https://render.githubusercontent.com/render/math?math=k"> clusters.
 
-During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
+During the incremental step, the algorithm finds the appropriate cluster for point <img src="https://render.githubusercontent.com/render/math?math=p_%7Bj%7D"> while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
 
 * given an initial set of clusters <img src="https://render.githubusercontent.com/render/math?math=C_%7B1%7D"> to <img src="https://render.githubusercontent.com/render/math?math=C_%7Bk%7D">:
@@ -76,7 +76,8 @@ expected entropy of the whole system. More specifically, the incremental step is
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
 to solve this problem: reprocessing the worst fitted datapoints. After a batch of datapoints is clustered, for each
 datapoint we can calculate the probability of clusters having values datapoint's values, i.e.
-we calculate <img src="https://render.githubusercontent.com/render/math?math=p_%7Bi%7D%20%3D%20%5Cprod_%7Bj%7D%20(p_%7Bij%7D)">for each datapoint. Afterwards, we find $m$ datapoints for which 
+we calculate <img src="https://render.githubusercontent.com/render/math?math=p_%7Bi%7D%20%3D%20%5Cprod_%7Bj%7D%20(p_%7Bij%7D)">for each datapoint. 
+Afterwards, we find <img src="https://render.githubusercontent.com/render/math?math=m"> datapoints for which 
 the calculated probability is the lowest and reprocess those datapoints again.
 
 #### COOLCAT: TO DO<br/>
