@@ -42,7 +42,7 @@ COOLCAT algorithm is used for clustering categorical datasets and is based on a 
 More specifically, the entropy of one categorical variable is:
 
 ![entropy](https://user-images.githubusercontent.com/57667464/111456984-e7ed0580-8717-11eb-8bfc-042c8a77e70e.png)
-
+<img src="https://render.githubusercontent.com/render/math?math=%5CHuge%0A%5Cbegin%7Balign*%7D%0Ax%26%3D1%5C%5C%0Ax%2By%26%3D2%5C%5C%0AP%26%3D%5Cbegin%7Bbmatrix%7Dp_1%5C%5Cp_2%5Cend%7Bbmatrix%7D%0A%5Cend%7Balign*%7D">
 Authors assume variable independence, which means that multivariate entropy is equal to
 the sum of each variable's entropy. The minimization criterion of the algorithm is the *expected 
 entropy of the whole system*:
