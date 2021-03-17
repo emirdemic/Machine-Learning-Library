@@ -34,7 +34,7 @@ This is the full list of algorithms this repository currently holds. Note that n
 
 ## Theoretical Explanations<a name="theorys"/><br/>
 
-###COOLCAT Clustering Algorithm<br/>
+### COOLCAT Clustering Algorithm<br/>
 
 
 The clustering analysis used here is COOLCAT clustering algorithm proposed by 
