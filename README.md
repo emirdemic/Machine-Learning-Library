@@ -8,6 +8,8 @@
 [Roadmap](#roadmap)<br/>
 [References](#references)<br/>
 
+<img src="https://render.githubusercontent.com/render/math?math=%5CLARGE%0A%5Cbegin%7Balign*%7D%0AE(C)%20%3D%20%5Csum_%7Bk%7D%20(%5Cfrac%7B%7CC_%7Bk%7D%7C%7D%7B%7CD%7C%7D(E(C_%7Bk%7D)))%0A%5Cend%7Balign*%7D%0A%0A">
+
 ## About The Project <a name="goal"/>
 The goal of the project is to create a personal machine learning library populated with different machine learning algorithms, written in Python using only NumPy library for quick and efficient computations. More specifically, the idea is to implement both common and uncommon machine learning algorithms.<br/><br/>
 Furthermore, this page contains theoretical and practical explanations of each machine learning algorithm currently populating this repository. This allows anyone using code from this repository to dive into theory behind the code.
