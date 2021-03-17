@@ -58,18 +58,19 @@ The initialization step finds two datapoints <img src="https://render.githubuser
 <img src="https://render.githubusercontent.com/render/math?math=E(p_%7B1%7D%2C%20p_%7B2%7D)"> is the highest possible. 
 These two datapoints will be assigned to clusters <img src="https://render.githubusercontent.com/render/math?math=C_%7B1%7D"> and 
 <img src="https://render.githubusercontent.com/render/math?math=C_%7B2%7D">.
-Afterwards, algorithm finds new datapoint $p_{j}$ which maximizes <img src="https://render.githubusercontent.com/render/math?math=min_%7Bi%3D1%2C...%2Cj-1%7D(E(p_%7Bi%7D%2C%20p_%7Bj%7D))">, 
+Afterwards, algorithm finds new datapoint <img src="https://render.githubusercontent.com/render/math?math=p_%7Bj%7D"> 
+which maximizes <img src="https://render.githubusercontent.com/render/math?math=min_%7Bi%3D1%2C...%2Cj-1%7D(E(p_%7Bi%7D%2C%20p_%7Bj%7D))">, 
 until it finds all <img src="https://render.githubusercontent.com/render/math?math=k"> points and initiate a total of <img src="https://render.githubusercontent.com/render/math?math=k"> clusters.
 
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
 
-* given an initial set of clusters $C_{1}$ to $C_{k}$:
-  * for each datapoint $p$ do:
-    * for $i = 1,...,k$:
-      * temporarily place $p$ in $C^{i}$ and calculate the expected entropy of the system $E(C^{i})$
-      * let $j = argmin_{i}(E(C^{i}))$
-    * place $p$ in $C_{j}$
+* given an initial set of clusters <img src="https://render.githubusercontent.com/render/math?math=C_%7B1%7D%24%20to%20%24C_%7Bk%7D">:
+  * for each datapoint <img src="https://render.githubusercontent.com/render/math?math=p"> do:
+    * for <img src="https://render.githubusercontent.com/render/math?math=i%20%3D%201%2C...%2Ck">:
+      * temporarily place <img src="https://render.githubusercontent.com/render/math?math=p"> in <img src="https://render.githubusercontent.com/render/math?math=C%5E%7Bi%7D"> and calculate the expected entropy of the system <img src="https://render.githubusercontent.com/render/math?math=E(C%5E%7Bi%7D)">
+      * let <img src="https://render.githubusercontent.com/render/math?math=j%20%3D%20argmin_%7Bi%7D(E(C%5E%7Bi%7D))">
+    * place <img src="https://render.githubusercontent.com/render/math?math=p"> in <img src="https://render.githubusercontent.com/render/math?math=C_%7Bj%7D">
   * until all points have been clustered
 
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
