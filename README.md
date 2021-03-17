@@ -48,16 +48,15 @@ the sum of each variable's entropy. The minimization criterion of the algorithm 
 entropy of the whole system*:
 
 ![expected_entropy](https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png)<br/><br/>
-<img align="right" width="100" height="100" src="https://user-images.githubusercontent.com/57667464/111457023-f4715e00-8717-11eb-86a5-30d28fc602f2.png")>
 
-where $|C_{k}|$ is the size of cluster $k$ and $|D|$ is the size of dataset. 
+where *Ck* is the size of cluster *k* and *|D|* is the size of dataset. 
 In other words, algorithm finds clusters which minimize expected entropy of all clusters.
 
 In order to find such clusters, algorithm goes through two steps: *initialization step* and *incremental step*. 
-The initialization step finds two datapoints $p_{1}$ and $p_{2}$ such that their multivariate entropy 
-$E(p_{1}, p_{2})$ is the highest possible. These two datapoints will be assigned to clusters $C_{1}$ and $C_{2}$.
-Afterwards, algorithm finds new datapoint $p_{j}$ which maximizes $min_{i=1,...,j-1}(E(p_{i}, p_{j}))$, 
-until it finds all $k$ points and initiate a total of $k$ clusters.
+The initialization step finds two datapoints *p1* and *p2* such that their multivariate entropy 
+*E(p1, p2)* is the highest possible. These two datapoints will be assigned to clusters *C1* and *C2*.
+Afterwards, algorithm finds new datapoint *pj* which maximizes *min(E(pi, pj)*
+until it finds all *k* points and initiate a total of *k* clusters.
 
 During the incremental step, the algorithm finds the appropriate cluster for point $p_{j}$ while minimizing the 
 expected entropy of the whole system. More specifically, the incremental step is:
@@ -67,8 +66,7 @@ expected entropy of the whole system. More specifically, the incremental step is
 
 Since the order of processing points may have an impact on the clustering quality, authors propose one heuristic
 to solve this problem: reprocessing the worst fitted datapoints. After a batch of datapoints is clustered, for each
-datapoint we can calculate the probability of clusters having values datapoint's values, i.e.
-we calculate $p_{i} = \prod_{j} (p_{ij})$ for each datapoint. Afterwards, we find $m$ datapoints for which 
+datapoint we can calculate the probability of clusters having values datapoint's values. Afterwards, we find *m* datapoints for which 
 the calculated probability is the lowest and reprocess those datapoints again.
 
 
