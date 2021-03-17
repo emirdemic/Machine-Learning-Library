@@ -89,6 +89,11 @@ The main method of the algorithm which clusters the data is done. However, there
 
 ## Roadmap<a name="roadmap"/>
 
+The goal for 2021 is to implement following algorithms:
+  * [CACTUS Clustering Algorithm](https://dl.acm.org/doi/abs/10.1145/312129.31220)
+  * [STIRR Clustering Algorithm](https://link.springer.com/article/10.1007/s007780050005)
+  * [Multidimensional Scaling for binary data]
+  * [Clsutering Algorithm Based on Association Rule Hypergraphs](https://conservancy.umn.edu/handle/11299/215301)
 
 
 ## References<a name="references"/>
